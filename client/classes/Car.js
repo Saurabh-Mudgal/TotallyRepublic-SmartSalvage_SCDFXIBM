@@ -1,24 +1,25 @@
 class Car {
-    constructor(position, scaleFactor, road, stepDistance) {
+    constructor(position, scaleFactor, road, stepDistance, isFireTruck) {
         this.id = sha256(new Date().getTime());
         this.position = position;
         this.scaleFactor = scaleFactor;
         this.road = road;
         this.stepDistance = stepDistance;
+        this.isFireTruck = isFireTruck;
     }
 
     move() {
         if (this.road.roadType == "left") {
             newX = this.position.x - stepDistance * this.scaleFactor;
-            if (newX <= this.endNode.x) {
-                newX = this.endNode.x;
+            if (newX <= this.road.endNode.x) {
+                newX = this.road.endNode.x;
             }
             this.position.x = newX;
             return this.position;
         } else {
             newY = this.position.y - this.stepDistance * this.scaleFactor;
-            if (newY <= this.endNode.y) {
-                newY = this.endNode.y;
+            if (newY <= this.road.endNode.y) {
+                newY = this.road.endNode.y;
             }
             this.position.y = newY;
             return this.position;
