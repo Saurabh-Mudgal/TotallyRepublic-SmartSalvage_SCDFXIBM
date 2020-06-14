@@ -62,7 +62,6 @@ By leveraging Singapore's technological advances and the cross-communication bet
 
 ## <b>Implementation Timeline</b>
 
-<<<<<<< HEAD
 ![alt text][TIMELINE]
 
 ## <b>Alternative Implementations</b>
