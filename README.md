@@ -1,23 +1,19 @@
-# Totally Republic
+# SingSmart Simulator
 
-## _<b>Solution:</b> SingSmart Simulator_
+_<b>Team Name:</b> Totally Republic_
 
-## _<b>Team Members:</b> Kunal, Naseer, Shiv, Saurabh, Abhinav_
-
-## _<b> Pitch Video:</b> https://youtu.be/h26g1bdlWOI_
+_<b>Team Members:</b> Kunal, Naseer, Shiv, Saurabh, Abhinav_
 
 _Built for SCDFxIBM's Lifesavers Innovation Challenge 2020_
+
 <hr>
 
 ## <b>The Idea</b> 💡
-We have developed an <b>interactive</b> simulation of a modern Singapore, built using [Blender](https://www.blender.org/) and [Three.js](https://threejs.org/) to help demonstrate how IoT can efficiently deal with crises and save precious resources. 
-## Our simulation is live and can be accessed [here](https://smartsing.mybluemix.net/).
 
-## Getting started
-The <b>easiest</b> way to try out a demo of our simulation is to click the link [here](https://smartsing.mybluemix.net/). Alternatively, you can download the files above and run `index.html` in a browser.
+We have developed an <b>interactive</b> simulation of a modern Singapore, built using [Blender](https://www.blender.org/) and [Three.js](https://threejs.org/) to help demonstrate how IoT can efficiently deal with crises and save precious resources. Our simulation is live and can be accessed [here](https://disasteravertsing.mybluemix.net/).
 
-## Our Architecture
 This model simulates moving vehicles and crowds in a day-to-day scenario with various IoT devices implemented:
+
 <ul>
 <li>Fire Alarms</li>
 <li>Multi-purpose autonomous robots</li>
@@ -31,11 +27,12 @@ This model simulates moving vehicles and crowds in a day-to-day scenario with va
 </ul>
 </li>
 </ul>
-The model uses <b>fire 🔥</b> as an example and allows the user to pick a starting location. On detecting the fire, numerous steps are taken to ensure the safety of the occupants and minimise damage to property. We propose the use of IBM Watson IoT and Cloud Hosting to allow rapid access and processing of data.
+The model uses <b>fire 🔥</b> as an example and allows the user to pick a starting location. On detecting the fire, numerous steps are taken to ensure the safety of the occupants and minimise damage to property.
 
 ## <b>Our Efficient Solution</b> ✔
 
 By leveraging Singapore's technological advances and the cross-communication between various IoT devices, the following steps are simulated:
+
 <ol>
 <li><b> Trigerring of the fire alarm and alerting of members of the building</b></li>
 <li><b> Re-routing of autonomous robots to:</b>
@@ -58,4 +55,29 @@ By leveraging Singapore's technological advances and the cross-communication bet
 
 ## <b>Implementation Timeline</b>
 
-![Implementation Timeline](https://imgur.com/a/tWdUOHr)
+![alt text][TIMELINE]
+
+## <b>Alternative Implementations</b>
+
+We were keen on demonstrating our idea with fires as it was one of the more common ouccurences among our list of crises and is probably the one we had the most comprehensive idea about.
+
+But apart from fires some of the other crises on our radar which we would tackle using IoT are:
+
+<ul>
+    <li>Floods</li>
+    <li>Medical Emergencies</li>
+    <li>Building Structural Fails</li>
+    <li>Power Outages</li>
+    <li>Missing Person Searches</li>
+    <li>Terror Attacks/Threats</li>
+</ul>
+
+Here is a mind map of all the ideas that we came up with:
+
+![alt text][MINDMAP]
+
+To get a clearer picture you may have a look at the pdf of the mindmap that can be found [here](./assets/SCDFXIBM.pdf).
+
+
+[TIMELINE]: ./assets/timeline.png "Timeline"
+[MINDMAP]: ./assets/SCDFXIBM.jpg "Mindmap"
