@@ -1,14 +1,17 @@
-# SingSmart Simulator
+# Totally Republic
 
-_<b>Team Name:</b> Totally Republic_
+## _<b>Solution:</b> SingSmart Simulator_
 
-_<b>Team Members:</b> Kunal, Naseer, Shiv, Saurabh, Abhinav_
+## _<b>Team Members:</b> Kunal, Naseer, Shiv, Saurabh, Abhinav_
+
+## _<b> Pitch Video:</b> https://youtu.be/h26g1bdlWOI_
 
 _Built for SCDFxIBM's Lifesavers Innovation Challenge 2020_
 <hr>
 
 ## <b>The Idea</b> 💡
-We have developed an <b>interactive</b> simulation of a modern Singapore, built using [Blender](https://www.blender.org/) and [Three.js](https://threejs.org/) to help demonstrate how IoT can efficiently deal with crises and save precious resources. Our simulation is live and can be accessed [here](https://disasteravertsing.mybluemix.net/).
+We have developed an <b>interactive</b> simulation of a modern Singapore, built using [Blender](https://www.blender.org/) and [Three.js](https://threejs.org/) to help demonstrate how IoT can efficiently deal with crises and save precious resources. 
+## Our simulation is live and can be accessed [here](https://disasteravertsing.mybluemix.net/).
 
 This model simulates moving vehicles and crowds in a day-to-day scenario with various IoT devices implemented:
 <ul>
@@ -24,7 +27,7 @@ This model simulates moving vehicles and crowds in a day-to-day scenario with va
 </ul>
 </li>
 </ul>
-The model uses <b>fire 🔥</b> as an example and allows the user to pick a starting location. On detecting the fire, numerous steps are taken to ensure the safety of the occupants and minimise damage to property.
+The model uses <b>fire 🔥</b> as an example and allows the user to pick a starting location. On detecting the fire, numerous steps are taken to ensure the safety of the occupants and minimise damage to property. We propose the use of IBM Watson IoT and Cloud Hosting to allow rapid access and processing of data.
 
 ## <b>Our Efficient Solution</b> ✔
 
@@ -51,4 +54,4 @@ By leveraging Singapore's technological advances and the cross-communication bet
 
 ## <b>Implementation Timeline</b>
 
-[timeline]: https://drive.google.com/file/d/1aQ4kmVhM3HoWqy7s3rA3sEnUMgjPsJUB/view?usp=sharing
+![SingSmart](https://drive.google.com/file/d/1aQ4kmVhM3HoWqy7s3rA3sEnUMgjPsJUB/view?usp=sharing)
