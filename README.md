@@ -49,3 +49,6 @@ By leveraging Singapore's technological advances and the cross-communication bet
 <li><b> Re-routing of vehicles to clear direct path from fire station to location of fire</b></li>
 </ol>
 
+## <b>Implementation Timeline</b>
+
+![SingSmart](https://drive.google.com/file/d/1aQ4kmVhM3HoWqy7s3rA3sEnUMgjPsJUB/view?usp=sharing)
