@@ -14,7 +14,7 @@ We have developed an <b>interactive</b> simulation of a modern Singapore, built 
 ## Our simulation is live and can be accessed [here](https://smartsing.mybluemix.net/).
 
 ## Getting started
-The <b>easiest</b> way to try out a demo of our simulation is to click the link [here](https://disasteravertsing.mybluemix.net/). Alternatively, you can download the files above and run `index.html` in a browser.
+The <b>easiest</b> way to try out a demo of our simulation is to click the link [here](https://smartsing.mybluemix.net/). Alternatively, you can download the files above and run `index.html` in a browser.
 
 ## Our Architecture
 This model simulates moving vehicles and crowds in a day-to-day scenario with various IoT devices implemented:
