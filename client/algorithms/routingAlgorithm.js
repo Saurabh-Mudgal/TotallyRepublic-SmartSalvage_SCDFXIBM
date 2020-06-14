@@ -106,8 +106,8 @@ class Traffic {
         return this.cars;
     }
 
-    clearPaths(startNode, endPosition) {
-        var roadsToClear = shortestPath(this.roadGraph, startNode, endPosition);
+    clearPaths(startNode, endNode, endPosition) {
+        var roadsToClear = bfsShortestPath(this.roadGraph, startNode, endNode);
         this.endPosition = endPosition;
         for (var i = 0; i < roadsToClear.length; i++) {
             var currRoad = pathsToClear[i];

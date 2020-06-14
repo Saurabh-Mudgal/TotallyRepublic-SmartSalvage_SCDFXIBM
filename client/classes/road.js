@@ -1,9 +1,9 @@
 class Road {
-    constructor(startNode, endNode, scaleFactor, requiredTraffic) {
+    constructor(startNode, endNode, scaleFactor, stepDistance) {
         this.startNode = startNode;
         this.endNode = endNode;
         this.currTraffic = 0;
-        this.requiredTraffic = requiredTraffic;
+
         this.cars = [];
         this.roadType =
             startNode.position.x - endNode.position.x == 0 ? "down" : "left";
@@ -12,6 +12,10 @@ class Road {
         } else {
             this.roadLength = Math.abs(startNode.x - endNode.x) * scaleFactor;
         }
+
+        this.requiredTraffic = Math.round(
+            this.roadLength / (2 * stepDistance * scaleFactor)
+        );
     }
 
     addCar(car) {
