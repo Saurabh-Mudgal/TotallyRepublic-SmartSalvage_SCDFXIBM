@@ -13,6 +13,10 @@ _Built for SCDFxIBM's Lifesavers Innovation Challenge 2020_
 We have developed an <b>interactive</b> simulation of a modern Singapore, built using [Blender](https://www.blender.org/) and [Three.js](https://threejs.org/) to help demonstrate how IoT can efficiently deal with crises and save precious resources. 
 ## Our simulation is live and can be accessed [here](https://disasteravertsing.mybluemix.net/).
 
+## Getting started
+The <b>easiest</b> way to try out a demo of our simulation is to click the link [here](https://disasteravertsing.mybluemix.net/). Alternatively, you can download the files above and run `index.html` in a browser.
+
+## Our Architecture
 This model simulates moving vehicles and crowds in a day-to-day scenario with various IoT devices implemented:
 <ul>
 <li>Fire Alarms</li>
