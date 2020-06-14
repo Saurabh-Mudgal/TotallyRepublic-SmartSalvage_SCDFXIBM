@@ -1,4 +1,4 @@
-# 
+# SingSmart Simulator
 
 _<b>Team Name:</b> Totally Republic_
 
