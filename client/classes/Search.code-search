@@ -1,0 +1,24 @@
+# Query: scaleFactor
+# Flags: IgnoreExcludeSettings
+
+15 results - 4 files
+
+client/algorithms/routingAlgorithm.js:
+    2:     constructor(roadGraph, scaleFactor, stepDistance) {
+    4:         this.scaleFactor = scaleFactor;
+   93:                         this.scaleFactor,
+  122:             this.scaleFactor,
+
+client/classes/Car.js:
+  2:     constructor(position, scaleFactor, road, stepDistance, isFireTruck) {
+  5:         this.scaleFactor = scaleFactor;
+
+client/classes/Person.js:
+  2:     constructor(position, footPath, stepDistance, scaleFactor){
+  5:         this.scaleFactor = scaleFactor;
+
+client/classes/Road.js:
+   2:     constructor(startNode, endNode, scaleFactor, stepDistance) {
+  11:             this.roadLength = Math.abs(startNode.y - endNode - y) ;
+  13:             this.roadLength = Math.abs(startNode.x - endNode.x) ;
+  17:             this.roadLength / (2 * stepDistance )

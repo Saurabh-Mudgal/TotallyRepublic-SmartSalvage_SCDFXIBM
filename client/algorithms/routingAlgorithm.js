@@ -56,7 +56,9 @@ class Traffic {
             // if car is on a general node then decide where to turn
             if (this.roadGraph.general[currCar.posString()] != null) {
                 currGeneralNode = this.roadGraph.general[currCar.posString()];
-                connectedRoads = this.roadGraph[currGeneralNode.posString()];
+                connectedRoads = this.roadGraph.graph[
+                    currGeneralNode.posString()
+                ];
                 for (var i = 0; i < connectedRoads.length; i++) {
                     currRoad = connectedRoads[i];
 
@@ -124,5 +126,81 @@ class Traffic {
             this.stepDistance,
             true
         );
+    }
+}
+
+class Crowd {
+    constructor(biRoadGraph, scaleFactor, stepDistance) {
+        this.roadGraph = biRoadGraph;
+        this.scaleFactor = scaleFactor;
+        this.stepDistance = stepDistance;
+        this.people = [];
+    }
+
+    spawn(num) {
+        var roads = this.roadGraph.roads;
+
+        for (var i = 0; i < num; i++) {
+            var randomRoad = roads[Math.floor(Math.random() * roads.length)];
+            if (randomRoad.roadType == "down") {
+                randomY =
+                    randomRoad.endNode.position.y +
+                    Math.random() *
+                        (randomRoad.startNode.position.y -
+                            randomRoad.endNode.position.y);
+                posX = randomRoad.startNode.position.x;
+                newDude = new Person(
+                    { x: posX, y: randomY },
+                    randomRoad,
+                    this.stepDistance,
+                    this.scaleFactor
+                );
+                // randomRoad.addCar(newDude);
+                this.people.push(newDude);
+            } else {
+                randomX =
+                    randomRoad.endNode.position.x +
+                    Math.random() *
+                        (randomRoad.startNode.position.x -
+                            randomRoad.endNode.position.x);
+                posY = randomRoad.startNode.position.y;
+                newDude = new Person(
+                    { x: randomX, y: posY },
+                    randomRoad,
+                    this.stepDistance,
+                    this.scaleFactor
+                );
+                // randomRoad.addCar(newDude);
+                this.people.push(newDude);
+            }
+        }
+    }
+
+    render() {
+        //Move all people
+
+        for (var i = 0; i < this.people.length; i++) {
+            currDude = this.people[i];
+            currDude.move();
+
+            // Decide where to go from general nodes
+
+            if (this.roadGraph.general[currDude.posString()]) {
+                connectedRoads = this.roadGraph.graph[currDude.posString()];
+                randomConnectedRoad =
+                    connectedRoads[
+                        Math.floor(Math.random() * connectedRoads.length)
+                    ];
+                currDude.road = randomConnectedRoad;
+            }
+
+            // if reach an end turn bacc lmao
+            if (
+                this.roadGraph.entry[currDude.posString()] ||
+                this.roadGraph.exit(currDude.posString())
+            ) {
+                currDude.positive *= -1;
+            }
+        }
     }
 }

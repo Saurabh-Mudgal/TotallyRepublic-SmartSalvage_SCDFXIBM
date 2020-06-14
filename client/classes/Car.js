@@ -10,14 +10,14 @@ class Car {
 
     move() {
         if (this.road.roadType == "left") {
-            newX = this.position.x - stepDistance * this.scaleFactor;
+            newX = this.position.x - stepDistance;
             if (newX <= this.road.endNode.x) {
                 newX = this.road.endNode.x;
             }
             this.position.x = newX;
             return this.position;
         } else {
-            newY = this.position.y - this.stepDistance * this.scaleFactor;
+            newY = this.position.y - this.stepDistance;
             if (newY <= this.road.endNode.y) {
                 newY = this.road.endNode.y;
             }
@@ -28,6 +28,13 @@ class Car {
 
     posString() {
         return JSON.stringify(this.position);
+    }
+
+    getPosition() {
+        return {
+            x: this.position.x * this.scaleFactor,
+            y: this.position.y * this.scaleFactor,
+        };
     }
 }
 
