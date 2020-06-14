@@ -58,4 +58,4 @@ By leveraging Singapore's technological advances and the cross-communication bet
 
 ## <b>Implementation Timeline</b>
 
-![Implementation Timeline](https://imgur.com/a/tWdUOHr)
+![Implementation Timeline](<blockquote class="imgur-embed-pub" lang="en" data-id="a/tWdUOHr" data-context="false" ><a href="//imgur.com/a/tWdUOHr"></a></blockquote><script async src="//s.imgur.com/min/embed.js" charset="utf-8"></script>)
