@@ -1,4 +1,4 @@
-class graph {
+class Graph {
     constructor(nodes, roads, bidirectional) {
         this.graph = {};
         this.entry = {};
@@ -6,7 +6,7 @@ class graph {
         this.general = {};
         this.roads = roads;
         this.bidirectional = bidirectional;
-        for (i = 0; i < nodes.length; i++) {
+        for (var i = 0; i < nodes.length; i++) {
             let currNode = nodes[i];
             if (currNode.type == "entry") {
                 this.entry[currNode.posString()] = currNode;
@@ -15,15 +15,15 @@ class graph {
             } else {
                 this.general[currNode.posString()] = currNode;
             }
-            graph[currNode.posString()] = [];
+            this.graph[currNode.posString()] = [];
         }
-        for (i = 0; i < roads.length; i++) {
+        for (var i = 0; i < roads.length; i++) {
             let currRoad = roads[i];
             // graph[currRoad.startNode.posString()].push({
             //     road: currRoad,
             //     neighbour: currRoad.endNode.posString(),
             // });
-            graph[currRoad.startNode.posString()].push(currRoad);
+            this.graph[currRoad.startNode.posString()].push(currRoad);
             if (this.bidirectional) {
                 reverseRoad = new Road(
                     currRoad.endNode,
@@ -39,3 +39,5 @@ class graph {
         return this.graph[node.posString()];
     }
 }
+
+export { Graph };

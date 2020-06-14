@@ -4,4 +4,49 @@
 <script src="classes/Road.js"></script>
 <script src="algorithms/routingAlgorithm.js"></script>
 
-<script></script>
+<script>
+    var basicGraph = [];
+    var nodes = [];
+
+    // startPos = [-130,-130];
+    for (var i = 0; i < 5; i++) {
+        row = [];
+        for (var j = 0; j < 5; j++) {
+            if (i == 0 || j == 0) {
+                type = "exit";
+            } else if (i == 4 || j == 4) {
+                type = "entry";
+            } else {
+                type = "general";
+            }
+            node = new Node({ x: -130 + 90 * i, y: -130 + 90 * j }, type);
+            row.push(node);
+            nodes.push(node);
+        }
+        basicGraph.push(row);
+    }
+
+    roads = [];
+
+    for (var i = 0; i < 5; i++) {
+        for (j = 0; j < 4; j++) {
+            road = new Road(basicGraph[i][j + 1], basicGraph[i][j], 1, 2);
+            roads.push(road);
+        }
+    }
+
+    for (var j = 0; j < 5; j++) {
+        for (var i = 0; i < 4; i++) {
+            road = new Road(basicGraph[i + 1][j], basicGraph[i][j], 1, 2);
+            roads.push(road);
+        }
+    }
+
+    myRoadGraph = new Graph(nodes, roads, false);
+    myTraffic = new Traffic(myRoadGraph, 1, 2);
+
+    for (var i = 0; i < 100; i++) {
+        myTraffic.render();
+        console.log(i);
+    }
+</script>

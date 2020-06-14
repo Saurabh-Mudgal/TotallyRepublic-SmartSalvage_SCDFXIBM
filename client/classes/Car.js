@@ -10,16 +10,16 @@ class Car {
 
     move() {
         if (this.road.roadType == "left") {
-            newX = this.position.x - stepDistance;
+            var newX = this.position.x - stepDistance;
             if (newX <= this.road.endNode.x) {
-                newX = this.road.endNode.x;
+                newX = Object.assign(this.road.endNode.x);
             }
             this.position.x = newX;
             return this.position;
         } else {
-            newY = this.position.y - this.stepDistance;
+            var newY = this.position.y - this.stepDistance;
             if (newY <= this.road.endNode.y) {
-                newY = this.road.endNode.y;
+                newY = Object.assign(this.road.endNode.y);
             }
             this.position.y = newY;
             return this.position;
@@ -143,3 +143,5 @@ var sha256 = function sha256(ascii) {
     }
     return result;
 };
+
+export { Car };

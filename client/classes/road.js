@@ -8,11 +8,15 @@ class Road {
         this.roadType =
             startNode.position.x - endNode.position.x == 0 ? "down" : "left";
         if (this.roadType == "down") {
-            this.roadLength = Math.abs(startNode.y - endNode.y);
+            this.roadLength = Math.abs(
+                startNode.position.y - endNode.position.y
+            );
         } else {
-            this.roadLength = Math.abs(startNode.x - endNode.x);
+            this.roadLength = Math.abs(
+                startNode.position.x - endNode.position.x
+            );
         }
-
+        // console.log(th);
         this.requiredTraffic = Math.round(this.roadLength / (2 * stepDistance));
     }
 
@@ -34,3 +38,5 @@ class Road {
         this.requiredTraffic = newRequiredTraffic;
     }
 }
+
+export { Road };

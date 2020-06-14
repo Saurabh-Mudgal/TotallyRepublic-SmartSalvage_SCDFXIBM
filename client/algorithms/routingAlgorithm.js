@@ -1,3 +1,5 @@
+import { Car } from "../classes/Car.js";
+
 class Traffic {
     constructor(roadGraph, scaleFactor, stepDistance) {
         this.roadGraph = roadGraph;
@@ -47,20 +49,23 @@ class Traffic {
                 }
             }
         }
+        console.log(Object.keys(this.cars).length);
         //Moving each exisiting car
-        allCars = Object.keys(this.cars);
+        var allCars = Object.keys(this.cars);
         for (var i = 0; i < allCars.length; i++) {
             var currCarKey = allCars[i];
             var currCar = this.cars[currCarKey];
             currCar.move();
             // if car is on a general node then decide where to turn
             if (this.roadGraph.general[currCar.posString()] != null) {
-                currGeneralNode = this.roadGraph.general[currCar.posString()];
-                connectedRoads = this.roadGraph.graph[
+                var currGeneralNode = this.roadGraph.general[
+                    currCar.posString()
+                ];
+                var connectedRoads = this.roadGraph.graph[
                     currGeneralNode.posString()
                 ];
-                for (var i = 0; i < connectedRoads.length; i++) {
-                    currRoad = connectedRoads[i];
+                for (var j = 0; j < connectedRoads.length; j++) {
+                    var currRoad = connectedRoads[j];
 
                     if (currRoad.currTraffic < currRoad.requiredTraffic) {
                         currCar.road.removeCar();
@@ -74,23 +79,24 @@ class Traffic {
             if (this.roadGraph.exit[currCar.posString()] != null) {
                 currCar.road.removeCar();
                 delete this.cars[currCar.id];
-                delete currCar;
+                // delete currCar;
             }
         }
 
         //Spawning new cars
-
-        for (var i = 0; i < this.entryNodes; i++) {
+        // console.log(this.entryNodes);
+        for (var i = 0; i < this.entryNodes.length; i++) {
             var currEntryNodeKey = this.entryNodes[i];
             var currEntryNode = this.roadGraph.entry[currEntryNodeKey];
+            // console.log("test");
             if (currEntryNode.timeSinceLastCarSpawn > 1) {
-                var connectedRoad = this.roadGraph[
+                var connectedRoad = this.roadGraph.graph[
                     currEntryNode.posString()
                 ][0];
-
+                // console.log("req", connectedRoad.requiredTraffic);
                 var spawnCar = Math.random() < 0.5;
                 if (connectedRoad.requiredTraffic != 0 && spawnCar) {
-                    newCar = new Car(
+                    var newCar = new Car(
                         currEntryNode.position,
                         this.scaleFactor,
                         connectedRoad,
@@ -204,3 +210,5 @@ class Crowd {
         }
     }
 }
+
+export { Traffic, Crowd };

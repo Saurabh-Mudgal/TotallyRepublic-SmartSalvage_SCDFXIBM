@@ -1,10 +1,9 @@
 class Node {
-    constructor(position, rate, neighbours, type) {
+    constructor(position, type) {
         this.position = position;
         // rate of objects entering node
-        this.rate = rate;
         // array of road objects
-        this.neighbours = neighbours;
+        // this.neighbours = neighbours;
         //Type can be entry, exit or general
         this.type = type;
 
@@ -14,3 +13,5 @@ class Node {
         return JSON.stringify(this.position);
     }
 }
+
+export { Node };
